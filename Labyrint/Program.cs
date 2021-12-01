@@ -46,25 +46,25 @@ while (room != "exit")
             Console.WriteLine("Stupid");
         }
 
-        if (room == "bathroom")
-        {
-            Console.WriteLine("You are in the bathroom, if go left you head back to the store.");
-            Console.WriteLine("If you want to exit jump down the toilet\n");
-            action = Console.ReadLine();
-            Console.Clear();
+    }
+    else if (room == "bathroom")
+    {
+        Console.WriteLine("You are in the bathroom, if go left you head back to the store.");
+        Console.WriteLine("If you want to exit jump down the toilet\n");
+        action = Console.ReadLine();
+        Console.Clear();
 
-            if (action == "left")
-            {
-                room = "store";
-            }
-            else if (action == "jump" || action == "exit")
-            {
-                room = "exit";
-            }
-            else
-            {
-                Console.WriteLine("Stupid");
-            }
+        if (action == "left")
+        {
+            room = "store";
+        }
+        else if (action == "jump" || action == "exit")
+        {
+            room = "exit";
+        }
+        else
+        {
+            Console.WriteLine("Stupid");
         }
     }
 }

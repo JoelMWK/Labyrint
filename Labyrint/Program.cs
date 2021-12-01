@@ -1,7 +1,11 @@
 ﻿using System;
+using System.IO;
 
 string room = "mancave";
 string action;
+
+string toiletpath = "toilet.txt";
+string toilet = File.ReadAllText(toiletpath);
 
 while (room != "exit")
 {
@@ -51,6 +55,7 @@ while (room != "exit")
     {
         Console.WriteLine("You are in the bathroom, if go left you head back to the store.");
         Console.WriteLine("If you want to exit jump down the toilet\n");
+
         action = Console.ReadLine();
         Console.Clear();
 
@@ -67,4 +72,11 @@ while (room != "exit")
             Console.WriteLine("Stupid");
         }
     }
+}
+
+if (room == "exit")
+{
+    Console.WriteLine(toilet);
+    Console.WriteLine("PRESS ANY KEY TO EXIT!");
+    Console.ReadLine();
 }
